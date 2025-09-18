@@ -75,9 +75,6 @@ export default function Lista() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <Pressable onPress={() => navigation.navigate('HomeUsuarios')}>
-          <AntDesign name="back" size={24} color="#fff" />
-        </Pressable>
         <ScrollView>
           {editingUser ? (
             <View style={styles.card}>

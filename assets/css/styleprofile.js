@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#2C2C2C',
     padding: 16,
     borderRadius: 8,
+    marginTop: 8
   },
 
   detailLabel: {

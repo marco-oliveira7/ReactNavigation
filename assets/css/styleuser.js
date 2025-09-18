@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
   containerHomeUsuarios: {
     flex: 1,
     backgroundColor: '#121212',
-    padding: 20,
     display: 'flex',
     justifyContent: 'center'
   },

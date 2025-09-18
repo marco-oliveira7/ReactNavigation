@@ -1,8 +1,8 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Welcome from './components/Welcome';
-import LayoutUsuarios from './components/Usuarios/_Layout';
-import Conta from './components/Conta';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Welcome from "./components/Welcome";
+import LayoutUsuarios from "./components/Usuarios/_Layout";
+import { DrawerComponent } from "./components/Conta";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 
 export default function Home() {
   const Tab = createBottomTabNavigator();
@@ -13,17 +13,18 @@ export default function Home() {
         tabBarIcon: ({ color, size }) => {
           let iconName;
 
-          if (route.name === 'Home') {
-            iconName = 'home';
-          } else if (route.name === 'Conta') {
-            iconName = 'user-circle';
+          if (route.name === "Home") {
+            iconName = "home";
+          } else if (route.name === "Conta") {
+            iconName = "user-circle";
           } else {
-            iconName = 'users';
+            iconName = "users";
           }
           return <FontAwesome name={iconName} size={size} color={color} />;
         },
-        tabBarInactiveTintColor: 'gray',
-      })}>
+        tabBarInactiveTintColor: "gray",
+      })}
+    >
       <Tab.Screen
         options={{ headerShown: false }}
         name="Welcome"
@@ -37,10 +38,8 @@ export default function Home() {
       <Tab.Screen
         options={{ headerShown: false }}
         name="Conta"
-        component={Conta}
+        component={DrawerComponent}
       />
     </Tab.Navigator>
   );
 }
-
-

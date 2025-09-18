@@ -30,15 +30,11 @@ export default function Login() {
   }, [register]);
 
   function onSubmit(data) {
-    if (!data.name || !data.email || !data.password) {
-      setTextModal('Não foi possível fazer a autenticação.');
-      setVisibleModal(true);
-    } else {
       setUserName(data.name);
       setUserEmail(data.email);
       setIsAdmin(isSelected);
-      navigation.navigate('Home');
-    }
+      navigation.navigate('Conta');
+    
   }
   const hideModal = () => setVisibleModal(false);
 

@@ -47,9 +47,6 @@ export default function Cadastrar() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Pressable onPress={() => navigation.navigate('HomeUsuarios')}>
-        <AntDesign name="back" size={24} color="#fff" />
-      </Pressable>
       <View style={styles.card}>
         <Text style={styles.title}>Preencha os campos abaixo</Text>
         <Text style={styles.text}>Name</Text>
