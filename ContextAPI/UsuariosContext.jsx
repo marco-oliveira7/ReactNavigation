@@ -1,12 +1,8 @@
-import React, { createContext, ReactNode, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
-export const UsuariosContext = createContext({});
+export const UsuariosContext = createContext(null);
 
-type userProps = {
-    children: ReactNode
-}
-
-const UsuariosContextProvider = (props: userProps) => {
+const UsuariosContextProvider = (props) => {
   const [visibleModalSaved, setVisibleModalSaved] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [visibleModalPermission, setVisibleModalPermission] = useState(false);

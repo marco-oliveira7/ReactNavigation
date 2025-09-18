@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { useForm } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/native';
-import { UsuariosContext } from '../ContextAPI/Usuarios';
+import { UsuariosContext } from './ContextAPI/UsuariosContext';
 import { Modal, Portal, Provider } from 'react-native-paper';
 import { styles } from './assets/css/style';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
