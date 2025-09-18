@@ -1,11 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import UsuariosContextProvider from './ContextAPI/UsuariosContext';
+import { createStackNavigator } from '@react-navigation/stack';
+import Login from './pages/Login'
+import Home from './pages/Home'
 
 export default function App() {
+  const Stack = createStackNavigator();
+
   return (
-    <View className='bg-black'>
-      <Text className='text-white'>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <UsuariosContextProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Login">
+          <Stack.Screen  options={{ headerShown: false }} name="Login" component={Login} />
+          <Stack.Screen  options={{ headerShown: false }} name="Home" component={Home} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </UsuariosContextProvider>
   );
 }
