@@ -4,13 +4,18 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#121212',
-    padding: 20,
+    padding: 15,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',     // Centers vertically
+    paddingBottom: '100px'
   },
   containerHomeUsuarios: {
     flex: 1,
     backgroundColor: '#121212',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+
   },
   card: {
     backgroundColor: '#1E1E1E',
@@ -22,6 +27,9 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.4,
     shadowRadius: 4,
     elevation: 5,
+    width:'1000px',
+    
+     
   },
   title: {
     color: '#fff',
@@ -68,6 +76,7 @@ export const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10,
     alignItems: 'center',
+    
   },
   modalText: {
     color: '#fff',
